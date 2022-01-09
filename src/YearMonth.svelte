@@ -21,7 +21,7 @@
 
 <div class="relative font-black bg-white col-span-3 overflow-hidden">
     <div
-        class="absolute inset-x-0 top-4 leading-none text-[8rem] text-{color}-100 z-0"
+        class="absolute inset-x-0 top-4 leading-none text-[8rem] text-gray-100 current25 z-0"
     >
         {(month + 1).toLocaleString("es", {
             minimumIntegerDigits: 2,
@@ -35,3 +35,9 @@
         <div class="text-3xl font-light">{year}</div>
     </div>
 </div>
+
+<style>
+    .current25 {
+        color: rgba(currentColor, 25);
+    }
+</style>
