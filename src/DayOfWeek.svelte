@@ -2,6 +2,6 @@
     export let day;
 </script>
 
-<div class="text-sm border-b border-green-600 bg-white">
+<div class="text-sm border-b border-current bg-white">
     {day.toUpperCase()}
 </div>

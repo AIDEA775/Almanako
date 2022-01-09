@@ -67,8 +67,8 @@
 </script>
 
 <div
-    id="month-body"
-    class="grid grid-cols-7 h-full border border-t-4 border-current-600 justify-items-stretch grid-rows-[1.5rem] bg-green-600 gap-x-px"
+    class="grid grid-cols-7 h-full border pt-2 border-current-600 
+    justify-items-stretch grid-rows-[1.5rem] gap-x-px drop-shadow-xl"
 >
     {#each dayNames as day}
         <DayOfWeek {day} />

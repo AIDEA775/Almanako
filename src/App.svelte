@@ -12,7 +12,7 @@
 
 	<div class="grid grid-cols-3 gap-16 mt-12 mx-auto max-w-screen-xl">
 		{#each months as month}
-			<div class="aspect-[1/1.4142] text-sky-600">
+			<div class="aspect-[1/1.4142] text-sky-600 border-sky-600 bg-sky-600">
 				<Month {month} />
 			</div>
 		{/each}

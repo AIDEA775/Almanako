@@ -7,7 +7,12 @@
 		{#if date === 0}
 			<div />
 		{:else}
-			<div class="h-full border-b-2 border-green-600 justify-center">
+			<div
+				class="h-full justify-center 
+				{date.getDay() === 0 || date.getDay() === 6
+					? 'text-rose-500'
+					: 'text-black'} border-b-2 border-current"
+			>
 				{date.getDate()}
 			</div>
 		{/if}

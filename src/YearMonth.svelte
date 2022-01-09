@@ -1,6 +1,7 @@
 <script>
     export let month = 1;
     export let year = 2022;
+    export let color = "stone";
 
     let monthNames = [
         "ENE",
@@ -20,7 +21,7 @@
 
 <div class="relative font-black bg-white col-span-3 overflow-hidden">
     <div
-        class="absolute inset-x-0 top-4 leading-none text-[8rem] text-gray-300 z-0"
+        class="absolute inset-x-0 top-4 leading-none text-[8rem] text-{color}-100 z-0"
     >
         {(month + 1).toLocaleString("es", {
             minimumIntegerDigits: 2,
