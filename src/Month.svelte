@@ -67,8 +67,11 @@
 </script>
 
 <div
-    class="grid grid-cols-7 h-full border pt-2 border-current-600 
-    justify-items-stretch grid-rows-[1.5rem] gap-x-px drop-shadow-xl"
+    class="grid grid-cols-7 grid-rows-[1.5rem]
+    border pt-2 border-primary 
+    justify-items-stretch h-full
+    gap-x-px drop-shadow-xl
+    font-primary"
 >
     {#each dayNames as day}
         <DayOfWeek {day} />
