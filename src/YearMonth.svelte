@@ -1,7 +1,6 @@
 <script>
     export let month = 1;
     export let year = 2022;
-    export let color = "stone";
 
     let monthNames = [
         "ENE",

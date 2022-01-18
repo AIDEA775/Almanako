@@ -70,8 +70,8 @@
     class="grid grid-cols-7 grid-rows-[1.5rem]
     border pt-2 border-primary 
     justify-items-stretch h-full
-    gap-x-px drop-shadow-xl
-    font-primary"
+    gap-x-px drop-shadow-xl print:drop-shadow-none
+    font-primary bg-primary"
 >
     {#each dayNames as day}
         <DayOfWeek {day} />

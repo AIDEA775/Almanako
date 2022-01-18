@@ -4,15 +4,23 @@
 	let months = [...Array(12).keys()];
 </script>
 
-<main class="bg-stone-100 text-center p-12" style="font-size: 24px">
-	<h1 class="font-sans font-black text-3xl text-stone-700">Almanako</h1>
-	<p class="font-sans text-lg text-stone-900">
+<main
+	class="bg-stone-100 text-center p-12 print:p-0 [font-size:24px] print:[font-size:48px]"
+>
+	<h1 class="font-sans font-black text-3xl text-stone-700 print:hidden">
+		Almanako
+	</h1>
+	<p class="font-sans text-lg text-stone-900 print:hidden">
 		Presiona Ctrl+P para imprimir el calendario
 	</p>
 
-	<div class="grid grid-cols-3 gap-16 mt-12 mx-auto max-w-screen-xl">
+	<div
+		class="flex flex-wrap justify-center gap-16 mt-12 mx-auto print:gap-0 print:m-0"
+	>
 		{#each months as month}
-			<div class="aspect-[1/1.4142] month-{month} bg-primary">
+			<div
+				class="shrink-0 aspect-[1/1.4142] w-80 month-{month} print:h-screen print:w-screen"
+			>
 				<Month {month} />
 			</div>
 		{/each}
@@ -23,6 +31,17 @@
 	@tailwind base;
 	@tailwind components;
 	@tailwind utilities;
+
+	html,
+	body {
+		margin: 0;
+		padding: 0;
+		-webkit-print-color-adjust: exact !important;
+	}
+
+	* {
+		box-sizing: border-box;
+	}
 
 	.month-0 {
 		--color-primary: 48 188 102;
