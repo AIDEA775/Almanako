@@ -4,10 +4,8 @@
 	let months = [...Array(12).keys()];
 </script>
 
-<main
-	class="bg-stone-100 text-center p-12 print:p-0 [font-size:24px] print:[font-size:48px]"
->
-	<h1 class="font-sans font-black text-3xl text-stone-700 print:hidden">
+<main class="bg-stone-100 text-center p-12 print:p-0 [font-size:24px]">
+	<h1 class="font-sans font-black text-fluid text-stone-700 print:hidden">
 		Almanako
 	</h1>
 	<p class="font-sans text-lg text-stone-900 print:hidden">
@@ -41,6 +39,10 @@
 
 	* {
 		box-sizing: border-box;
+	}
+
+	.text-fluid {
+		font-size: clamp(2rem, 4vw, 4rem);
 	}
 
 	.month-0 {
@@ -77,7 +79,7 @@
 	}
 	.month-8 {
 		--color-primary: 250 204 116;
-		--font-primary: Grenze Gotisch;
+		--font-primary: Ubuntu;
 	}
 	.month-9 {
 		--color-primary: 88 216 218;

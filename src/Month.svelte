@@ -67,10 +67,13 @@
 </script>
 
 <div
-    class="grid grid-cols-7 grid-rows-[1.5rem]
-    border pt-2 border-primary 
-    justify-items-stretch h-full
-    gap-x-px drop-shadow-xl print:drop-shadow-none
+    class="grid grid-cols-7
+    grid-rows-[1.5rem] print:grid-rows-[3vh]
+    pt-2 print:pt-[1vh]
+    border border-primary
+    justify-items-stretch
+    gap-x-px h-full
+    drop-shadow-xl print:drop-shadow-none
     font-primary bg-primary"
 >
     {#each dayNames as day}
