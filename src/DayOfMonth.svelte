@@ -23,21 +23,20 @@
 
 <div
 	class="flex flex-col bg-white
-	leading-none overflow-hidden
+	overflow-hidden
 	border-y border-white
-	px-1
-	print:p-[1vh]
-	text-xl print:text-[4vh]"
+	p-1 print:p-[1vh]"
 >
 	<div
-		class="justify-center pt-2
-			{date.getDay() === 0 || date.getDay() === 6
+		class="justify-center leading-none
+		text-xl print:text-[4.5vh]
+		{date.getDay() === 0 || date.getDay() === 6
 			? 'text-rose-500 border-rose-500'
 			: 'text-black border-black'}"
 	>
 		{date.getDate()}
 	</div>
-	<ul class="list-disc">
+	<ul class="list-disc list-inside">
 		{#each holis as h}
 			<li class="text-caption">
 				{h.summary}
@@ -46,8 +45,8 @@
 	</ul>
 	<div class="flex-grow" />
 	{#if births.length}
-		<div class="text-[0.5rem] leading-none py-1">🎂</div>
-		<ul class="list-disc">
+		<div class="text-[0.5rem] print:text-[2vh] leading-none py-1">🎂</div>
+		<ul class="list-disc list-inside">
 			{#each births as b}
 				<li class="text-caption">
 					{b.summary}

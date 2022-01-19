@@ -5,6 +5,10 @@
 	let months = [...Array(12).keys()];
 </script>
 
+<svelte:head>
+	<title>Almanako {new Date().getFullYear()}</title>
+</svelte:head>
+
 <main
 	class="bg-stone-100 text-center p-12 print:p-0 selection:bg-stone-200 selection:text-stone-900"
 >
