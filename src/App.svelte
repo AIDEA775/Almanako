@@ -1,16 +1,23 @@
 <script>
+	import Holidays from "./Holidays.svelte";
 	import Month from "./Month.svelte";
 
 	let months = [...Array(12).keys()];
 </script>
 
-<main class="bg-stone-100 text-center p-12 print:p-0 [font-size:24px]">
+<main
+	class="bg-stone-100 text-center p-12 print:p-0 selection:bg-stone-200 selection:text-stone-900"
+>
 	<h1 class="font-sans font-black text-fluid text-stone-700 print:hidden">
 		Almanako
 	</h1>
 	<p class="font-sans text-lg text-stone-900 print:hidden">
 		Presiona Ctrl+P para imprimir el calendario
 	</p>
+
+	<div class="print:hidden">
+		<Holidays />
+	</div>
 
 	<div
 		class="flex flex-wrap justify-center gap-16 mt-12 mx-auto print:gap-0 print:m-0"

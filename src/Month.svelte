@@ -68,7 +68,7 @@
 
 <div
     class="grid grid-cols-7
-    grid-rows-[1.5rem] print:grid-rows-[3vh]
+    grid-rows-[1.5rem,repeat(5,1fr)] print:grid-rows-[3vh,repeat(5,1fr)]
     pt-2 print:pt-[1vh]
     border border-primary
     justify-items-stretch
@@ -84,7 +84,9 @@
         {#each weeks as date}
             {#if typeof date === "string"}
                 <YearMonth {year} {month} />
-            {:else}
+            {:else if date === 0}
+                <div class="bg-white" />
+            {:else if date !== null}
                 <DayOfMonth {date} />
             {/if}
         {/each}
