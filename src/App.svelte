@@ -40,7 +40,7 @@
 		{/each}
 	</div>
 
-	<footer class="p-2 bg-stone-200">
+	<footer class="p-4 bg-stone-50">
 		Made with 👑🦠 from Argentina,
 		<a
 			class="underline decoration-rose-500 text-rose-500"
