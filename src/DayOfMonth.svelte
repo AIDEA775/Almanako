@@ -36,23 +36,19 @@
 	>
 		{date.getDate()}
 	</div>
-	<ul class="list-disc list-inside">
-		{#each holis as h}
-			<li class="text-caption">
-				{h.summary}
-			</li>
-		{/each}
-	</ul>
+	{#each holis as h}
+		<div class="text-caption">
+			• {h.summary}
+		</div>
+	{/each}
 	<div class="flex-grow" />
 	{#if births.length}
 		<div class="text-[0.5rem] print:text-[2vh] leading-none py-1">🎂</div>
-		<ul class="list-disc list-inside">
-			{#each births as b}
-				<li class="text-caption">
-					{b.summary}
-				</li>
-			{/each}
-		</ul>
+		{#each births as b}
+			<div class="text-caption">
+				• {b.summary}
+			</div>
+		{/each}
 	{/if}
 	<div
 		class="border-b-2 m-1

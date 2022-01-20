@@ -16,15 +16,15 @@
 		Almanako
 	</h1>
 	<p class="font-sans text-lg text-stone-900 print:hidden">
-		Presiona Ctrl+P para imprimir el calendario
+		Press Ctrl+P to print
 	</p>
 
-	<div class="print:hidden">
+	<div class="print:hidden my-4">
 		<Holidays />
 	</div>
 
 	<div
-		class="flex flex-wrap justify-center gap-16 mt-12 mx-auto print:gap-0 print:m-0"
+		class="flex flex-wrap justify-center gap-16 my-6 mx-auto print:gap-0 print:m-0 will-change-transform"
 	>
 		{#each months as month}
 			<div
