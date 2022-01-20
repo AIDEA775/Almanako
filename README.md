@@ -33,9 +33,9 @@ npm run build
 
 ## Deploying to the web
 
-### With [Github](https://github.com/)
+### With [GitHub](https://github.com/)
 
-Deploy using Github Pages:
+Deploy using GitHub Pages:
 
 ```bash
 npm run deploy
