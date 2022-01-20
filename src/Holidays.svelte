@@ -25,39 +25,45 @@
     class="py-2 px-4 rounded-full bg-stone-50 font-semibold hover:bg-stone-200"
     on:click={toggle}
 >
-    Options
+    OPTIONS
 </button>
 
 <div
-    class="flex flex-col my-4
+    class="flex flex-col gap-y-4
     transition-scroll overflow-hidden duration-700
-    {showing ? 'max-h-48 landscape:max-h-24 opacity-100' : 'max-h-0 opacity-0'}
-    items-center justify-center landscape:flex-row gap-x-16 gap-y-8"
+    {showing
+        ? 'max-h-[14rem] landscape:max-h-[7rem] opacity-100 my-8'
+        : 'max-h-0 opacity-0 my-0'}
+    items-center justify-center "
 >
-    <div
-        class="flex flex-col group gap-y-2"
-        title="Selecciona un archivo .ICS con los feriados, podes descargar uno desde Google Calendar."
-    >
-        <label for="holidays" class="font-semibold">Feriados 📅</label>
-        <input
-            type="file"
-            id="holidays"
-            bind:files={holidaysFile}
-            title="Selecciona un archivo .ICS con los feriados, podes descargar uno desde Google Calendar."
-        />
-    </div>
+    <p class="text-stone-500">Add events to calendar in .ics format</p>
 
-    <div
-        class="flex flex-col group gap-y-2"
-        title="Selecciona un archivo .ICS con los cumpleaños."
-    >
-        <label for="birthdays" class="font-semibold"> Cumpleaños 🎂 </label>
-        <input
-            type="file"
-            id="birthdays"
-            bind:files={birthdayFile}
+    <div class="flex flex-col landscape:flex-row gap-x-16 gap-y-8">
+        <div
+            class="flex flex-col group gap-y-2"
+            title="Selecciona un archivo .ICS con los feriados, podes descargar uno desde Google Calendar."
+        >
+            <label for="holidays" class="font-semibold">Holidays 📅</label>
+            <input
+                type="file"
+                id="holidays"
+                bind:files={holidaysFile}
+                title="Selecciona un archivo .ICS con los feriados, podes descargar uno desde Google Calendar."
+            />
+        </div>
+
+        <div
+            class="flex flex-col group gap-y-2"
             title="Selecciona un archivo .ICS con los cumpleaños."
-        />
+        >
+            <label for="birthdays" class="font-semibold">Birthdays 🎂 </label>
+            <input
+                type="file"
+                id="birthdays"
+                bind:files={birthdayFile}
+                title="Selecciona un archivo .ICS con los cumpleaños."
+            />
+        </div>
     </div>
 </div>
 

@@ -10,7 +10,7 @@
 </svelte:head>
 
 <main
-	class="bg-stone-100 text-center p-12 print:p-0 selection:bg-stone-200 selection:text-stone-900"
+	class="bg-stone-100 text-center pt-12 print:p-0 selection:bg-stone-200 selection:text-stone-900"
 >
 	<h1 class="font-sans font-black text-fluid text-stone-700 print:hidden">
 		Almanako
@@ -24,16 +24,31 @@
 	</div>
 
 	<div
-		class="flex flex-wrap justify-center gap-16 my-6 mx-auto print:gap-0 print:m-0 will-change-transform"
+		class="flex flex-wrap justify-center 
+		gap-16 print:gap-0
+		px-12 mx-auto my-12 print:m-0
+		will-change-transform"
 	>
 		{#each months as month}
 			<div
-				class="shrink-0 aspect-[1/1.4142] w-80 month-{month} print:h-screen print:w-screen"
+				class="shrink-0 aspect-[1/1.4142]
+				month-{month}
+				w-80 print:h-screen print:w-screen"
 			>
 				<Month {month} />
 			</div>
 		{/each}
 	</div>
+
+	<footer class="p-2 bg-stone-200">
+		Made with 👑🦠 from Argentina,
+		<a
+			class="underline decoration-rose-500 text-rose-500"
+			href="https://github.com/AIDEA775/almanako"
+			rel="noopener noreferrer"
+			target="_blank">fork me!</a
+		>
+	</footer>
 </main>
 
 <style lang="postcss" global>
