@@ -1,3 +1,9 @@
+# Almanako
+
+Simple and responsive calendar to print built with [Svelte](https://svelte.dev/).
+
+[![pages-build-deployment](https://github.com/AIDEA775/almanako/actions/workflows/pages/pages-build-deployment/badge.svg)](https://github.com/AIDEA775/almanako/actions/workflows/pages/pages-build-deployment)
+
 ## Get started
 
 Install the dependencies...
