@@ -3,10 +3,11 @@
 	import Month from "./Month.svelte";
 
 	let months = [...Array(12).keys()];
+	let year = new Date().getFullYear();
 </script>
 
 <svelte:head>
-	<title>Almanako {new Date().getFullYear()}</title>
+	<title>Almanako {year}</title>
 </svelte:head>
 
 <main
@@ -35,7 +36,7 @@
 				month-{month}
 				w-80 print:h-screen print:w-screen"
 			>
-				<Month {month} />
+				<Month {month} {year} />
 			</div>
 		{/each}
 	</div>
