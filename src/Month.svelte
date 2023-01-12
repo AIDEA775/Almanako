@@ -6,10 +6,11 @@
     export let month = 0;
     export let year = 2022;
 
+    console.log(`Process: ${year} ${month}`);
+
     let dayNames = ["dom", "lun", "mar", "mie", "jue", "vie", "sab"];
 
     let dayNumbers = getMatrix(year, month);
-    console.log(dayNumbers);
 
     let lastRow = emptyDaysInWeek(dayNumbers[4]);
     if (lastRow >= 3) {
@@ -24,6 +25,10 @@
         dayNumbers[0][2] = null;
     }
 
+    setEmptyDays(dayNumbers, 0);
+    setEmptyDays(dayNumbers, 4);
+    console.log(dayNumbers);
+
     function getMatrix(year, month) {
         let currentDate = new Date(year, month);
         let firstDay = currentDate.getDay();
@@ -35,7 +40,8 @@
 
         let array = Array(5)
             .fill(0)
-            .map((_, i) => Array(7).fill(0));
+            .map((_) => Array(7).fill(0));
+
         for (let i = 0; i < 5; i++) {
             for (let j = 0; j < 7; j++) {
                 let d = i * 7 + j;
@@ -64,6 +70,24 @@
     function emptyDaysInWeek(week) {
         return week.reduce((acc, b) => acc + (b === 0 ? 1 : 0), 0);
     }
+
+    function indexEmptyDaysInWeek(week) {
+        return week.reduce(
+            (acc, w, i) => (w === 0 ? (acc.push(i), acc) : acc),
+            []
+        );
+    }
+
+    function setEmptyDays(dayNumbers, week) {
+        let emptyDays = indexEmptyDaysInWeek(dayNumbers[week]);
+        if (emptyDays.length >= 2) {
+            for (const i of emptyDays) {
+                dayNumbers[week][i] = null;
+            }
+            let first = emptyDays[0];
+            dayNumbers[week][first] = emptyDays.length;
+        }
+    }
 </script>
 
 <div
@@ -73,7 +97,7 @@
     border border-primary
     justify-items-stretch
     gap-x-px h-full
-    drop-shadow-xl print:drop-shadow-none
+    shadow-xl shadow-[color:rgb(var(--color-primary)/0.1)] print:shadow-none
     font-primary bg-primary"
 >
     {#each dayNames as day}
@@ -84,8 +108,14 @@
         {#each weeks as date}
             {#if typeof date === "string"}
                 <YearMonth {year} {month} />
-            {:else if date === 0}
-                <div class="bg-white" />
+            {:else if typeof date === "number"}
+                {#if date > 0}
+                    <div
+                        class="bg-white outline outline-1 z-10 text-primary col-span-{date}"
+                    />
+                {:else}
+                    <div class="bg-white" />
+                {/if}
             {:else if date !== null}
                 <DayOfMonth {date} />
             {/if}
