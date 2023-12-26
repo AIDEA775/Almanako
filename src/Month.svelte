@@ -15,16 +15,13 @@
     let lastRow = emptyDaysInWeek(dayNumbers[4]);
     if (lastRow >= 3) {
         // three empty space in the last column
-        dayNumbers[4][4] = "bottom";
-        dayNumbers[4][5] = null;
+        dayNumbers[4][5] = "mini";
         dayNumbers[4][6] = null;
     } else {
         // empty space in the first column
-        dayNumbers[0][0] = "top";
+        dayNumbers[0][0] = "mini";
         dayNumbers[0][1] = null;
-        dayNumbers[0][2] = null;
     }
-
     setEmptyDays(dayNumbers, 0);
     setEmptyDays(dayNumbers, 4);
     console.log(dayNumbers);
@@ -74,7 +71,7 @@
     function indexEmptyDaysInWeek(week) {
         return week.reduce(
             (acc, w, i) => (w === 0 ? (acc.push(i), acc) : acc),
-            []
+            [],
         );
     }
 
@@ -92,13 +89,12 @@
 
 <div
     class="grid grid-cols-7
-    grid-rows-[1.5rem,repeat(5,1fr)] print:grid-rows-[3vh,repeat(5,1fr)]
-    pt-2 print:pt-[1vh]
-    border border-primary
-    justify-items-stretch
-    gap-x-px h-full
+    grid-rows-[1.5rem,repeat(5,1fr)] print:grid-rows-[4.5vh,repeat(5,1fr)]
+    pt-2 print:pt-[1.5vh]
+    border border-2 print:border-[0.5vh] border-primary
+    justify-items-stretch h-full
     shadow-xl shadow-[color:rgb(var(--color-primary)/0.1)] print:shadow-none
-    font-primary bg-primary"
+    font-primary bg-white"
 >
     {#each dayNames as day}
         <DayOfWeek {day} />
@@ -107,12 +103,10 @@
     {#each dayNumbers as weeks}
         {#each weeks as date}
             {#if typeof date === "string"}
-                <YearMonth {year} {month} />
+                <YearMonth {year} {month} {date} />
             {:else if typeof date === "number"}
                 {#if date > 0}
-                    <div
-                        class="bg-white outline outline-1 z-10 text-primary col-span-{date}"
-                    />
+                    <div class="bg-white z-10 border border-white col-span-{date}" />
                 {:else}
                     <div class="bg-white" />
                 {/if}

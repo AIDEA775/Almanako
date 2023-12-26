@@ -1,24 +1,23 @@
 <script>
     export let month = 1;
     export let year = 2022;
+    export let date = "large";
 
-    let date = new Date(Date.UTC(year, month + 1));
+    let span = date == "large" ? "3" : "2";
 
-    let monthName = date.toLocaleDateString("default", {
+    let now = new Date(Date.UTC(year, month + 1));
+    let monthName = now.toLocaleDateString("es-US", {
         month: "short",
-    });
+    }).substring(0, 3); // Only 3 characters
 </script>
 
 <div
     class="relative leading-none
-    overflow-hidden col-span-3
-    outline outline-1
+    overflow-hidden col-span-{span}
+    border border-white
     text-primary bg-white"
 >
-    <div
-        class="absolute grid content-center
-        inset-0 z-10"
-    >
+    <div class="absolute grid content-center inset-0 z-10">
         <div
             class="uppercase font-bold leading-none
             text-4xl print:text-[6vh]"

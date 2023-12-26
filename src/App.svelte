@@ -3,7 +3,18 @@
 	import Month from "./Month.svelte";
 
 	let months = [...Array(12).keys()];
-	let year = new Date().getFullYear();
+
+	let now = new Date();
+
+	let year = now.getFullYear();
+
+	console.log(`Now is ${year} ${now.getMonth()}`);
+
+	// after half the year, move on to the next year
+	if (now.getMonth() > 6) {
+		year += 1;
+	}
+
 </script>
 
 <svelte:head>

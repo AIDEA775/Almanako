@@ -11,28 +11,29 @@
 	$: holis = $holidays.filter(
 		(it) =>
 			sameMonthAndDay(it.startDate.toJSDate(), date) &&
-			sameYear(it.startDate.toJSDate(), date)
+			sameYear(it.startDate.toJSDate(), date),
 	);
 
 	// Ignore year in birthdays
 	// TODO: Use `RRULE:FREQ=YEARLY`
 	$: births = $birthdays.filter((it) =>
-		sameMonthAndDay(it.startDate.toJSDate(), date)
+		sameMonthAndDay(it.startDate.toJSDate(), date),
 	);
 </script>
 
 <div
 	class="flex flex-col bg-white
 	overflow-hidden
-	border-y border-white
+	border-x border-white
+	{date.getDay() % 2 === 1 ? "bg-primary/[.2]" : ""}
 	p-1 print:p-[1vh]"
 >
 	<div
 		class="justify-center leading-none
 		text-xl print:text-[4.5vh]
 		{date.getDay() === 0 || date.getDay() === 6
-			? 'text-rose-500 border-rose-500'
-			: 'text-black border-black'}"
+			? 'text-primary font-black'
+			: 'text-black'}"
 	>
 		{date.getDate()}
 	</div>
@@ -50,12 +51,7 @@
 			</div>
 		{/each}
 	{/if}
-	<div
-		class="border-b-2 m-1
-			{date.getDay() === 0 || date.getDay() === 6
-			? 'border-rose-500'
-			: 'border-black'}"
-	/>
+	<div class="border-b-2 m-1 border-primary" />
 </div>
 
 <style>
