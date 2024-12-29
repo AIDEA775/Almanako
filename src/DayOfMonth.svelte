@@ -3,29 +3,29 @@
 
 	export let date;
 
-	const sameYear = (d1, d2) => d1.getFullYear() === d2.getFullYear();
+	const isBetween = (start, d, end) =>
+		start.getTime() <= d.getTime() && d.getTime() < end.getTime();
 
-	const sameMonthAndDay = (d1, d2) =>
-		d1.getMonth() === d2.getMonth() && d1.getDate() === d2.getDate();
+	const resetYear = (d) => {
+		const result = new Date(d);
+		result.setFullYear(date.getFullYear());
+		return result;
+	};
 
-	$: holis = $holidays.filter(
-		(it) =>
-			sameMonthAndDay(it.startDate.toJSDate(), date) &&
-			sameYear(it.startDate.toJSDate(), date),
-	);
+	const todayEvents = (it) =>
+		isBetween(it.start, date, it.end) ||
+		(it.isRecurring &&
+			isBetween(resetYear(it.start), date, resetYear(it.end)));
 
-	// Ignore year in birthdays
-	// TODO: Use `RRULE:FREQ=YEARLY`
-	$: births = $birthdays.filter((it) =>
-		sameMonthAndDay(it.startDate.toJSDate(), date),
-	);
+	$: holis = $holidays.filter(todayEvents);
+	$: births = $birthdays.filter(todayEvents);
 </script>
 
 <div
 	class="flex flex-col bg-white
 	overflow-hidden
 	border-x border-white
-	{date.getDay() % 2 === 1 ? "bg-primary/[.2]" : ""}
+	{date.getDay() % 2 === 1 ? 'bg-primary/[.2]' : ''}
 	p-1 print:p-[1vh]"
 >
 	<div
@@ -56,6 +56,6 @@
 
 <style>
 	.text-caption {
-		@apply leading-none font-[Roboto] text-[0.25rem] print:text-[1vh];
+		@apply leading-none font-['Patrick_Hand_SC'] text-[0.35rem] print:text-[1.25vh];
 	}
 </style>

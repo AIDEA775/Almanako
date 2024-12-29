@@ -8,17 +8,20 @@ const parseICS = (ics, set) => {
     if (ics == null) return [];
 
     ics.text().then(text => {
-        var jcalData = ICAL.parse(text);
-        console.log('jcalData', jcalData);
-        var vcalendar = new ICAL.Component(jcalData);
-        console.log('vcalendar', vcalendar);
-        var components = vcalendar.getAllSubcomponents("vevent");
-        console.log('components', components);
-        var events = components.map(it => new ICAL.Event(it));
-        console.log('events', events);
-        // var result = events.reduce((acc, v) => ({ ...acc, [v.startDate.toJSDate()]: v.summary }), {});
-        // console.log('result', result);
-        set(events);
+        const jcalData = ICAL.parse(text);
+        const vcalendar = new ICAL.Component(jcalData);
+        const components = vcalendar.getAllSubcomponents("vevent");
+        const events = components.map(it => new ICAL.Event(it));
+
+        const result = events.map(it => ({
+            isRecurring: it.isRecurring(),
+            start: it.startDate.toJSDate(),
+            end: it.endDate.toJSDate(),
+            summary: it.summary,
+        }));
+
+        console.table(result);
+        set(result);
     });
 }
 

@@ -5,63 +5,50 @@
     let birthdayFile;
 
     $: if (holidaysFile) {
-        console.log(holidaysFile);
+        console.log("holidaysFile:", holidaysFile);
         holidaysICS.set(holidaysFile[0]);
     }
 
     $: if (birthdayFile) {
-        console.log(birthdayFile);
+        console.log("birthdayFile:", birthdayFile);
         birthdaysICS.set(birthdayFile[0]);
-    }
-
-    let showing = false;
-
-    function toggle() {
-        showing = !showing;
     }
 </script>
 
-<button
-    class="py-2 px-4 rounded-full bg-stone-50 font-semibold hover:bg-stone-200"
-    on:click={toggle}
->
-    OPTIONS
-</button>
-
 <div
     class="flex flex-col gap-y-4
-    transition-scroll overflow-hidden duration-700
-    {showing
-        ? 'max-h-[14rem] landscape:max-h-[7rem] opacity-100 my-8'
-        : 'max-h-0 opacity-0 my-0'}
-    items-center justify-center "
+    max-h-[14rem] landscape:max-h-[7rem] opacity-100 my-8
+    items-center justify-center"
 >
     <p class="text-stone-500">Add events to calendar in .ics format</p>
 
     <div class="flex flex-col landscape:flex-row gap-x-16 gap-y-8">
         <div
             class="flex flex-col group gap-y-2"
-            title="Selecciona un archivo .ICS con los feriados, podes descargar uno desde Google Calendar."
+            title="Select an .ICS file with the holidays, you can download one from Google Calendar."
         >
             <label for="holidays" class="font-semibold">Holidays 📅</label>
             <input
                 type="file"
+                accept="text/calendar"
                 id="holidays"
                 bind:files={holidaysFile}
-                title="Selecciona un archivo .ICS con los feriados, podes descargar uno desde Google Calendar."
+                multiple
+                title="Select an .ICS file with the holidays, you can download one from Google Calendar."
             />
         </div>
 
         <div
             class="flex flex-col group gap-y-2"
-            title="Selecciona un archivo .ICS con los cumpleaños."
+            title="Select a .ICS file with birthdays."
         >
             <label for="birthdays" class="font-semibold">Birthdays 🎂 </label>
             <input
                 type="file"
+                accept="text/calendar"
                 id="birthdays"
                 bind:files={birthdayFile}
-                title="Selecciona un archivo .ICS con los cumpleaños."
+                title="Select a .ICS file with birthdays."
             />
         </div>
     </div>

@@ -27,7 +27,7 @@
 	<h1 class="font-sans font-black text-fluid text-stone-700 print:hidden">
 		Almanako
 	</h1>
-	<p class="font-sans text-lg text-stone-900 print:hidden">
+	<p class="font-sans text-2xl text-stone-900 print:hidden">
 		Press Ctrl+P to print
 	</p>
 
@@ -36,7 +36,7 @@
 	</div>
 
 	<div
-		class="flex flex-wrap justify-center 
+		class="flex flex-wrap justify-center
 		gap-16 print:gap-0
 		px-12 mx-auto my-12 print:m-0
 		will-change-transform"
@@ -85,50 +85,50 @@
 
 	.month-0 {
 		--color-primary: 48 188 102;
-		--font-primary: Roboto;
+		--font-primary: Bangers;
 	}
 	.month-1 {
-		--color-primary: 235 87 220;
-		--font-primary: Fraunces;
+		--color-primary: 235 86 220;
+		--font-primary: Limelight;
 	}
 	.month-2 {
 		--color-primary: 220 131 116;
-		--font-primary: Dosis;
+		--font-primary: Indie Flower;
 	}
 	.month-3 {
 		--color-primary: 157 201 91;
-		--font-primary: Bodoni Moda;
+		--font-primary: Kiwi Maru;
 	}
 	.month-4 {
 		--color-primary: 55 179 247;
-		--font-primary: Josefin Sans;
+		--font-primary: Cinzel;
 	}
 	.month-5 {
 		--color-primary: 93 107 237;
-		--font-primary: Montserrat;
+		--font-primary: Sour Gummy;
 	}
 	.month-6 {
-		--color-primary: 161 161 161;
-		--font-primary: Open Sans;
+		--color-primary: 255 172 58;
+		--font-primary: Rampart One;
 	}
 	.month-7 {
 		--color-primary: 169 121 250;
-		--font-primary: Oswald;
+		--font-primary: Rye;
 	}
 	.month-8 {
 		--color-primary: 250 204 116;
-		--font-primary: Ubuntu;
+		--font-primary: Agu Display;
 	}
 	.month-9 {
 		--color-primary: 88 216 218;
-		--font-primary: Stick No Bills;
+		--font-primary: Mystery Quest;
 	}
 	.month-10 {
 		--color-primary: 36 202 168;
-		--font-primary: Tourney;
+		--font-primary: Metal Mania;
 	}
 	.month-11 {
 		--color-primary: 220 68 93;
-		--font-primary: Sansita Swashed;
+		--font-primary: Rubik Moonrocks;
 	}
 </style>

@@ -6,7 +6,7 @@
     export let month = 0;
     export let year = 2022;
 
-    console.log(`Process: ${year} ${month}`);
+    console.groupCollapsed(`Process: ${year} ${month}`);
 
     let dayNames = ["dom", "lun", "mar", "mie", "jue", "vie", "sab"];
 
@@ -24,7 +24,10 @@
     }
     setEmptyDays(dayNumbers, 0);
     setEmptyDays(dayNumbers, 4);
-    console.log(dayNumbers);
+
+    console.table(dayNumbers);
+
+    console.groupEnd();
 
     function getMatrix(year, month) {
         let currentDate = new Date(year, month);
