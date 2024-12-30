@@ -1,5 +1,5 @@
 <script>
-	import { birthdays, holidays } from "./stores.js";
+	import { icsList } from "./shared.js";
 
 	export let date;
 
@@ -17,8 +17,10 @@
 		(it.isRecurring &&
 			isBetween(resetYear(it.start), date, resetYear(it.end)));
 
-	$: holis = $holidays.filter(todayEvents);
-	$: births = $birthdays.filter(todayEvents);
+	// TODO? generalize
+	$: birthdays = $icsList[0].data.filter(todayEvents);
+	$: holidays = $icsList[1].data.filter(todayEvents);
+	$: dayof = $icsList[2].data.filter(todayEvents);
 </script>
 
 <div
@@ -26,7 +28,7 @@
 	overflow-hidden
 	border-x border-white
 	{date.getDay() % 2 === 1 ? 'bg-primary/[.2]' : ''}
-	p-1 print:p-[1vh]"
+	py-1 print:py-[1vh]"
 >
 	<div
 		class="justify-center leading-none
@@ -37,15 +39,20 @@
 	>
 		{date.getDate()}
 	</div>
-	{#each holis as h}
+	{#each holidays as h}
 		<div class="text-caption">
 			• {h.summary}
 		</div>
 	{/each}
+	{#each dayof as d}
+		<div class="text-caption">
+			⭐ {d.summary}
+		</div>
+	{/each}
 	<div class="flex-grow" />
-	{#if births.length}
+	{#if birthdays.length}
 		<div class="text-[0.5rem] print:text-[2vh] leading-none py-1">🎂</div>
-		{#each births as b}
+		{#each birthdays as b}
 			<div class="text-caption">
 				• {b.summary}
 			</div>
