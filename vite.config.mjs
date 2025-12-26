@@ -7,6 +7,5 @@ export default defineConfig({
   plugins: [
     svelte(),
     tailwindcss(),
-  ],
-  base: '/almanako/', // Configuración para GitHub Pages (nombre del repo)
+  ]
 })
