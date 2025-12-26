@@ -27,51 +27,51 @@ body {
 	font-size: clamp(2rem, 4vw, 4rem);
 }
 
-.month-0 {
-	--color-primary: rgb(48,188, 102);
+.month-0 { /* ene */
+	--color-primary: #30bc66;
 	--font-primary: Bangers;
 }
-.month-1 {
-	--color-primary: rgb(235, 86, 220);
+.month-1 { /* feb */
+	--color-primary: #eb56dc;
 	--font-primary: Limelight;
 }
-.month-2 {
-	--color-primary: rgb(220, 131, 116);
+.month-2 { /* mar */
+	--color-primary: #dc8374;
 	--font-primary: Indie Flower;
 }
-.month-3 {
-	--color-primary: rgb(157, 201, 91);
+.month-3 { /* abr */
+	--color-primary: #9dc95b;
 	--font-primary: Kiwi Maru;
 }
-.month-4 {
-	--color-primary: rgb(55, 179, 247);
+.month-4 { /* may */
+	--color-primary: #37b3f7;
 	--font-primary: Cinzel;
 }
-.month-5 {
-	--color-primary: rgb(93, 107, 237);
+.month-5 { /* jun */
+	--color-primary: #5d6bed;
 	--font-primary: Sour Gummy;
 }
-.month-6 {
-	--color-primary: rgb(255, 172, 58);
+.month-6 { /* jul */
+	--color-primary: #ffac3a;
 	--font-primary: Rampart One;
 }
-.month-7 {
-	--color-primary: rgb(169, 121, 250);
+.month-7 { /* ago */
+	--color-primary: #a979fa;
 	--font-primary: Rye;
 }
-.month-8 {
-	--color-primary: rgb(250, 204, 116);
+.month-8 { /* sep */
+	--color-primary: #facc74;
 	--font-primary: Agu Display;
 }
-.month-9 {
-	--color-primary: rgb(88, 216, 218);
+.month-9 { /* oct */
+	--color-primary: #58d8da;
 	--font-primary: Mystery Quest;
 }
-.month-10 {
-	--color-primary: rgb(36, 202, 168);
+.month-10 { /* nov */
+	--color-primary: #24caa8;
 	--font-primary: Metal Mania;
 }
-.month-11 {
-	--color-primary: rgb(220, 68, 93);
+.month-11 { /* dic */
+	--color-primary: #dc445d;
 	--font-primary: Rubik Moonrocks;
 }
