@@ -1,14 +1,13 @@
 <script>
+	import { getMonthName } from "./shared.js";
+
     export let month = 1;
     export let year = 2022;
     export let date = "large";
 
     let span = date == "large" ? "3" : "2";
 
-    let now = new Date(Date.UTC(year, month + 1));
-    let monthName = now.toLocaleDateString("es-US", {
-        month: "short",
-    }).substring(0, 3); // Only 3 characters
+    let monthName = getMonthName(month)
 </script>
 
 <div

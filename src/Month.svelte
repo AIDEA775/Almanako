@@ -96,7 +96,6 @@
     pt-2 print:pt-[1.5vh]
     border border-2 print:border-[0.5vh] border-primary
     justify-items-stretch h-full
-    shadow-xl shadow-primary/10 print:shadow-none
     font-primary bg-white"
 >
     {#each dayNames as day}
