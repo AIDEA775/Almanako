@@ -28,20 +28,15 @@
                         icsFile.data = await parse(ev.target.files);
                     }}
                     title="Select a .ICS file with birthdays."
+                    class="text-sm text-stone-500
+                        file:mr-2 file:py-2 file:px-4
+                        file:rounded-full file:border file:border-solid file:border-stone-200
+                        file:text-sm
+                        file:bg-stone-100 file:text-stone-700
+                        group-hover:file:bg-stone-200"
                 />
                 <div class="font-medium text-stone-700">{icsFile.label}</div>
             </div>
         {/each}
     </div>
 </div>
-
-<style lang="postcss">
-    input[type="file"] {
-        @apply text-sm text-stone-500
-            file:mr-2 file:py-2 file:px-4
-            file:rounded-full file:border file:border-solid file:border-stone-200
-            file:text-sm
-            file:bg-stone-100 file:text-stone-700
-            group-hover:file:bg-stone-200;
-    }
-</style>

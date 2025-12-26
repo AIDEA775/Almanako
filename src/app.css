@@ -1,5 +1,16 @@
 @import "tailwindcss";
 
+@theme {
+	--color-primary: var(--color-primary);
+	--font-primary: var(--font-primary);
+	--font-caption: "Patrick Hand SC", cursive;
+}
+
+:root {
+	--color-primary: rgb(255, 100, 50);
+	--font-primary: 'Inter', sans-serif;
+}
+
 html,
 body {
 	margin: 0;
@@ -17,50 +28,50 @@ body {
 }
 
 .month-0 {
-	--color-primary: 48 188 102;
+	--color-primary: rgb(48,188, 102);
 	--font-primary: Bangers;
 }
 .month-1 {
-	--color-primary: 235 86 220;
+	--color-primary: rgb(235, 86, 220);
 	--font-primary: Limelight;
 }
 .month-2 {
-	--color-primary: 220 131 116;
+	--color-primary: rgb(220, 131, 116);
 	--font-primary: Indie Flower;
 }
 .month-3 {
-	--color-primary: 157 201 91;
+	--color-primary: rgb(157, 201, 91);
 	--font-primary: Kiwi Maru;
 }
 .month-4 {
-	--color-primary: 55 179 247;
+	--color-primary: rgb(55, 179, 247);
 	--font-primary: Cinzel;
 }
 .month-5 {
-	--color-primary: 93 107 237;
+	--color-primary: rgb(93, 107, 237);
 	--font-primary: Sour Gummy;
 }
 .month-6 {
-	--color-primary: 255 172 58;
+	--color-primary: rgb(255, 172, 58);
 	--font-primary: Rampart One;
 }
 .month-7 {
-	--color-primary: 169 121 250;
+	--color-primary: rgb(169, 121, 250);
 	--font-primary: Rye;
 }
 .month-8 {
-	--color-primary: 250 204 116;
+	--color-primary: rgb(250, 204, 116);
 	--font-primary: Agu Display;
 }
 .month-9 {
-	--color-primary: 88 216 218;
+	--color-primary: rgb(88, 216, 218);
 	--font-primary: Mystery Quest;
 }
 .month-10 {
-	--color-primary: 36 202 168;
+	--color-primary: rgb(36, 202, 168);
 	--font-primary: Metal Mania;
 }
 .month-11 {
-	--color-primary: 220 68 93;
+	--color-primary: rgb(220, 68, 93);
 	--font-primary: Rubik Moonrocks;
 }

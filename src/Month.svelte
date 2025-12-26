@@ -92,11 +92,11 @@
 
 <div
     class="grid grid-cols-7
-    grid-rows-[1.5rem,repeat(5,1fr)] print:grid-rows-[4.5vh,repeat(5,1fr)]
+    grid-rows-[1.5rem_repeat(5,1fr)] print:grid-rows-[4.5vh_repeat(5,1fr)]
     pt-2 print:pt-[1.5vh]
     border border-2 print:border-[0.5vh] border-primary
     justify-items-stretch h-full
-    shadow-xl shadow-[color:rgb(var(--color-primary)/0.1)] print:shadow-none
+    shadow-xl shadow-primary/10 print:shadow-none
     font-primary bg-white"
 >
     {#each dayNames as day}
