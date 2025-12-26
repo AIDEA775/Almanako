@@ -10,7 +10,7 @@ function withOpacityValue(variable) {
 }
 
 module.exports = {
-  content: ['./public/index.html', './src/**/*.svelte'],
+  content: ['./index.html', './src/**/*.svelte'],
   safelist: [
     'col-span-1',
     'col-span-2',

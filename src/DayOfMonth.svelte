@@ -61,7 +61,7 @@
 	<div class="border-b-2 m-1 border-primary" />
 </div>
 
-<style>
+<style lang="postcss">
 	.text-caption {
 		@apply leading-none font-['Patrick_Hand_SC'] text-[0.35rem] print:text-[1.25vh];
 	}

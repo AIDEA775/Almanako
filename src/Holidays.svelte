@@ -35,7 +35,7 @@
     </div>
 </div>
 
-<style>
+<style lang="postcss">
     input[type="file"] {
         @apply text-sm text-stone-500
             file:mr-2 file:py-2 file:px-4
