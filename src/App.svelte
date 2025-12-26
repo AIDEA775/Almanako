@@ -37,16 +37,23 @@
 	</div>
 
 	<div
-		class="flex flex-wrap justify-center
-		gap-16 print:gap-0
-		px-12 mx-auto my-12 print:m-0
-		will-change-transform"
-	>
+		class="grid gap-y-12 justify-items-center
+			grid-cols-1
+			sm:grid-cols-2
+			md:grid-cols-3
+			lg:grid-cols-4
+			xl:grid-cols-6
+			2xl:grid-cols-12
+			mx-auto my-12 pl-50 pr-10
+			print:grid-cols-1 print:gap-0 print:p-0 print:m-0
+			will-change-transform select-none"
+		>
 		{#each months as month}
-			<div
-				class="shrink-0 aspect-[1/1.4142]
-				month-{month}
-				w-80 print:h-screen print:w-screen"
+			<div class="shrink-0 aspect-[1/1.4142] w-80 -ml-40
+					month-{month} z-{12-month}
+					print:h-screen print:w-screen print:m-0
+					transition-transform origin-center
+					hover:scale-105 hover:translate-x-1/3 hover:-translate-y-6 hover:rotate-25"
 			>
 				<Month {month} {year} />
 			</div>
