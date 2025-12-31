@@ -27,7 +27,9 @@
 
 <main
 	data-theme={$currentTheme}
-	class="bg-stone-100 text-center pt-12 print:p-0 selection:bg-stone-200 selection:text-stone-900"
+	class="bg-stone-100 overflow-hidden text-center
+	pt-12 print:p-0
+	selection:bg-stone-200 selection:text-stone-900"
 >
 	<h1 class="font-sans font-black text-fluid text-stone-700 print:hidden">
 		Almanako

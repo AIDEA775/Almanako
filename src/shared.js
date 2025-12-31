@@ -5,7 +5,6 @@ export const currentTheme = writable("default");
 export const themes = [
 	{ id: "default", name: "Default" },
 	{ id: "gemini", name: "Gemini" },
-	{ id: "high-contrast", name: "Gemini High-contrast" },
 	{ id: "legacy", name: "Legacy (2025)" },
 ];
 
@@ -13,8 +12,8 @@ export const showTestPage = writable(false);
 
 export const icsList = writable([
 	{ file: null, label: "Birthdays 🎂", data: [] },
-	{ file: null, label: "Holidays 🥳", data: [] },
-	{ file: null, label: "Day of 📅", data: [] },
+	{ file: null, label: "Holidays 📅", data: [] },
+	{ file: null, label: "Day of ⭐", data: [] },
 ]);
 
 export const parse = async (ics) => {
