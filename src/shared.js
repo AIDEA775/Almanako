@@ -1,9 +1,8 @@
 import * as ICAL from 'ical.js';
 import { writable } from 'svelte/store';
 
-export const currentTheme = writable("default");
+export const currentTheme = writable("gemini");
 export const themes = [
-	{ id: "default", name: "Default" },
 	{ id: "gemini", name: "Gemini" },
 	{ id: "legacy", name: "Legacy (2025)" },
 ];

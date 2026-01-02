@@ -61,20 +61,7 @@ body {
 [data-theme="gemini"] .month-5 /* jun */ { --color-primary: #00B0FF; }
 [data-theme="gemini"] .month-6 /* jul */ { --color-primary: #1565C0; }
 [data-theme="gemini"] .month-7 /* ago */ { --color-primary: #7B1FA2; }
-[data-theme="gemini"] .month-8 /* sep */ { --color-primary: #D81B60; }
-[data-theme="gemini"] .month-9 /* oct */ { --color-primary: #FF7043; }
-[data-theme="gemini"] .month-10 /* nov */ { --color-primary: #C2185B; }
+[data-theme="gemini"] .month-8 /* sep */ { --color-primary: #EB56DC; }
+[data-theme="gemini"] .month-9 /* oct */ { --color-primary: #FFAC3A; }
+[data-theme="gemini"] .month-10 /* nov */ { --color-primary: #FF7043; }
 [data-theme="gemini"] .month-11 /* dic */ { --color-primary: #E60000; }
-
-[data-theme="default"] .month-0 /* ene */ { --color-primary: #eb56dc; }
-[data-theme="default"] .month-1 /* feb */ { --color-primary: #a979fa; }
-[data-theme="default"] .month-2 /* mar */ { --color-primary: #5d6bed; }
-[data-theme="default"] .month-3 /* abr */ { --color-primary: #37b3f7; }
-[data-theme="default"] .month-4 /* may */ { --color-primary: #58d8da; }
-[data-theme="default"] .month-5 /* jun */ { --color-primary: #24caa8; }
-[data-theme="default"] .month-6 /* jul */ { --color-primary: #30bc66; }
-[data-theme="default"] .month-7 /* ago */ { --color-primary: #9dc95b; }
-[data-theme="default"] .month-8 /* sep */ { --color-primary: #facc74; }
-[data-theme="default"] .month-9 /* oct */ { --color-primary: #ffac3a; }
-[data-theme="default"] .month-10 /* nov */ { --color-primary: #dc8374; }
-[data-theme="default"] .month-11 /* dic */ { --color-primary: #dc445d; }
