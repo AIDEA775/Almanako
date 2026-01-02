@@ -8,26 +8,35 @@
     let span = date == "large" ? "3" : "2";
 
     let monthName = getMonthName(month)
+    let monthNum = (month + 1).toLocaleString("es", {
+        minimumIntegerDigits: 2,
+        useGrouping: false,
+    });
 </script>
 
 <div
-    class="relative leading-none
+    class="flex flex-col justify-center px-3 print:px-[2.5vh]
+    {date === "first" ? "items-start" : "items-end"}
     overflow-hidden col-span-{span}
-    border border-white
+    border border-white leading-none
     text-primary bg-white"
 >
-    <div class="absolute grid content-center inset-0 z-10">
-        <div
-            class="uppercase font-bold leading-none
-            text-4xl print:text-[6vh]"
-        >
-            {monthName.replaceAll(".", "")}
-        </div>
-        <div
-            class="font-light leading-none
-            text-3xl print:text-[5vh]"
-        >
-            {year}
-        </div>
+    <div
+        class="font-light
+        text-[1.3em] print:text-[4.5vh]"
+    >
+        {monthNum}
+    </div>
+    <div
+        class="uppercase font-light
+        text-[1.3em] print:text-[4.5vh]"
+    >
+        {monthName}
+    </div>
+    <div
+        class="font-light
+        text-[1.2em] print:text-[4vh]"
+    >
+        {year}
     </div>
 </div>

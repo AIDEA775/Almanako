@@ -15,11 +15,11 @@
     let lastRow = emptyDaysInWeek(dayNumbers[4]);
     if (lastRow >= 3) {
         // three empty space in the last column
-        dayNumbers[4][5] = "mini";
+        dayNumbers[4][5] = "last";
         dayNumbers[4][6] = null;
     } else {
         // empty space in the first column
-        dayNumbers[0][0] = "mini";
+        dayNumbers[0][0] = "first";
         dayNumbers[0][1] = null;
     }
     setEmptyDays(dayNumbers, 0);
